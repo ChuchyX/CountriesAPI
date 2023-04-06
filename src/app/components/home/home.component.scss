@@ -1,3 +1,29 @@
 .containerHome{
   color: var(--Text);
 }
+.container_filters{
+ display: flex;
+ justify-content: space-between;
+}
+.input_search_container{
+  position: relative;
+}
+.input_search{
+  width: 20rem;
+  height: 45px;
+  padding-left: 25px;
+  border-radius: 5px;
+  background-color: var(--Elements);
+  color: var(--Text);
+  border: none
+}
+.input_search::placeholder{
+  color: var(--Text);
+}
+
+
+.dropdown-toggle{
+  background-color: var(--Elements);
+  color: var(--Text);
+  height: 45px;
+}
