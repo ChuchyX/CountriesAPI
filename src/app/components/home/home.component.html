@@ -2,7 +2,7 @@
   <div class="container_filters mt-5">
     <div class="input_search_container">
       <i class="fa-solid fa-magnifying-glass lupa"></i>
-      <input type="text" name="search" class="input_search" placeholder="Search for a country...">
+      <input type="text" name="search" class="input_search" placeholder="Search for a country..." [(ngModel)]="searchText">
     </div>
     <div class="dropdown">
       <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -19,7 +19,7 @@
   </div>
   <div class="container_countries mt-5">
 
-    <div class="card" *ngFor="let country of countries">
+    <div class="card" *ngFor="let country of countries | filter: searchText">
       <img [src]="country.flags.svg" class="card-img-top" alt="flag">
       <div class="card-body">
         <h5 class="card-title card_country">{{country.name.common}}</h5>
