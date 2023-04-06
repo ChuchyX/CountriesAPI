@@ -9,11 +9,11 @@
         Filter by Region
       </button>
       <ul class="dropdown-menu menu_region">
-        <li><a class="dropdown-item item_region">Africa</a></li>
-        <li><a class="dropdown-item item_region">America</a></li>
-        <li><a class="dropdown-item item_region">Asia</a></li>
-        <li><a class="dropdown-item item_region">Europe</a></li>
-        <li><a class="dropdown-item item_region">Oceania</a></li>
+        <li (click)="filterByRegion('Africa')"><a class="dropdown-item item_region">Africa</a></li>
+        <li (click)="filterByRegion('Americas')"><a class="dropdown-item item_region">America</a></li>
+        <li (click)="filterByRegion('Asia')"><a class="dropdown-item item_region">Asia</a></li>
+        <li (click)="filterByRegion('Europe')"><a class="dropdown-item item_region">Europe</a></li>
+        <li (click)="filterByRegion('Oceania')"><a class="dropdown-item item_region">Oceania</a></li>
       </ul>
     </div>
   </div>
