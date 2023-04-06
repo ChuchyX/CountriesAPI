@@ -3,13 +3,18 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CountriesService {
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient: HttpClient) { }
-
-  getCountries(): Observable<any>{
+  getCountries(): Observable<any> {
     return this.httpClient.get('https://restcountries.com/v3.1/all');
+  }
+
+  getCountry(country: string): Observable<any> {
+    return this.httpClient.get(
+      'https://restcountries.com/v3.1/name/' + country
+    );
   }
 }

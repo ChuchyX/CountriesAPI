@@ -46,6 +46,9 @@ li a:hover{
   cursor: pointer;
 }
 
+.card{
+  cursor: pointer;
+}
 .container_countries{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
