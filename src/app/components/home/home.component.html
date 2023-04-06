@@ -1,12 +1,9 @@
 <div class="container containerHome">
   <div class="container_filters mt-5">
-
     <div class="input_search_container">
       <i class="fa-solid fa-magnifying-glass lupa"></i>
       <input type="text" name="search" class="input_search" placeholder="Search for a country...">
     </div>
-
-
     <div class="dropdown">
       <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Filter by Region
@@ -19,5 +16,18 @@
         <li><a class="dropdown-item item_region">Oceania</a></li>
       </ul>
     </div>
+  </div>
+  <div class="container_countries mt-5">
+
+    <div class="card" *ngFor="let country of countries">
+      <img [src]="country.flags.svg" class="card-img-top" alt="flag">
+      <div class="card-body">
+        <h5 class="card-title card_country">{{country.name.common}}</h5>
+        <p class="card-text">Population: <span class="span_card">{{country.population}}</span></p>
+        <p class="card-text">Region: <span class="span_card">{{country.region}}</span></p>
+        <p class="card-text">Capital: <span class="span_card">{{country.capital}}</span></p>
+      </div>
+    </div>
+
   </div>
 </div>

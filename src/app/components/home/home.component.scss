@@ -46,6 +46,26 @@ li a:hover{
   cursor: pointer;
 }
 
+.container_countries{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+}
+
+.card_country{
+  font-weight: 700;
+}
+
+.card-text
+{
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.span_card{
+  font-weight: 100;
+}
 @media (max-width: 500px) {
   .container_filters {
     flex-direction: column;
@@ -53,5 +73,11 @@ li a:hover{
   }
   .input_search {
     width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container_countries {
+    grid-template-columns: 1fr;
   }
 }
