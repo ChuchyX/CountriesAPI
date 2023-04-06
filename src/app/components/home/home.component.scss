@@ -8,10 +8,15 @@
 .input_search_container {
   position: relative;
 }
+.lupa{
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
 .input_search {
   width: 20rem;
   height: 45px;
-  padding-left: 25px;
+  padding-left: 45px;
   border-radius: 5px;
   background-color: var(--Elements);
   color: var(--Text);
@@ -24,6 +29,21 @@
   background-color: var(--Elements);
   color: var(--Text);
   height: 45px;
+}
+.menu_region{
+  background-color: var(--Elements);
+}
+.item_region{
+  color: var(--Text);
+}
+
+li:hover{
+  background-color: var(--Elements) !important;
+}
+
+li a:hover{
+  background-color: var(--Elements) !important;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
