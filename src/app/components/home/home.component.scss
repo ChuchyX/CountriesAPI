@@ -36,16 +36,13 @@
 .item_region{
   color: var(--Text);
 }
-
 li:hover{
   background-color: var(--Elements) !important;
 }
-
 li a:hover{
   background-color: var(--Elements) !important;
   cursor: pointer;
 }
-
 .card{
   cursor: pointer;
 }
@@ -55,11 +52,9 @@ li a:hover{
   grid-template-rows: auto;
   grid-gap: 30px;
 }
-
 .card_country{
   font-weight: 700;
 }
-
 .card-text
 {
   font-weight: 700;
@@ -69,6 +64,7 @@ li a:hover{
 .span_card{
   font-weight: 100;
 }
+
 @media (max-width: 500px) {
   .container_filters {
     flex-direction: column;

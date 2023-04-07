@@ -1,0 +1,54 @@
+.boton_back{
+  width: 6rem;
+  height: 2rem;
+  background-color: var(--Elements);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  color: var(--Text);
+  padding-top: 5px;
+}
+.boton_back:hover{
+  cursor: pointer;
+}
+.arrow_back{
+  color: var(--Text);
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+}
+
+.container_grid_details{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
+  grid-gap: 10rem;
+}
+
+.name_country{
+  color: var(--Text);
+  font-weight: 700;
+}
+
+.details{
+  display: flex;
+  gap: 2rem;
+}
+
+.pall{
+  color: var(--Text);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 1px;
+}
+
+.span_detail{
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--Text);
+}
+
+
+@media (max-width: 767px) {
+  .container_grid_details {
+    grid-template-columns: 1fr;
+  }
+}
