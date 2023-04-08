@@ -1,21 +1,73 @@
 <div class="container container_details mt-5">
-  <div class="boton_back"><i class="arrow_back fa-solid fa-arrow-left"></i>Back</div>
+  <div class="boton_back" [routerLink]="['']">
+    <i class="arrow_back fa-solid fa-arrow-left"></i>Back
+  </div>
 
   <div class="container_grid_details mt-5">
-    <img [src]="country.flags.svg" class="card-img-top img_details" alt="flag">
+    <img
+      [src]="country.flags.svg"
+      class="card-img-top img_details"
+      alt="flag"
+    />
+
     <div class="country_details">
-      <h2 class="name_country">{{country.name.common}}</h2>
-      <div class="details mt-2">
+      <h2 class="name_country">{{ country.name.common }}</h2>
+      <div class="details mt-5">
         <div class="left">
-          <p class="pall">Native Name: &nbsp;<span class="span_detail">{{country.name.official}}</span></p>
-          <p class="pall">Population: &nbsp;<span class="span_detail">{{country.population}}</span></p>
-          <p class="pall">Region: &nbsp;<span class="span_detail">{{country.region}}</span></p>
-          <p class="pall">Sub Region: &nbsp;<span class="span_detail">{{country.subregion}}</span></p>
-          <p class="pall">Capital: &nbsp;<span class="span_detail">{{country.capital}}</span></p>
+          <p class="pall">
+            Native Name: &nbsp;<span class="span_detail">{{
+              country.name.official
+            }}</span>
+          </p>
+          <p class="pall">
+            Population: &nbsp;<span class="span_detail">{{
+              country.population
+            }}</span>
+          </p>
+          <p class="pall">
+            Region: &nbsp;<span class="span_detail">{{ country.region }}</span>
+          </p>
+          <p class="pall">
+            Sub Region: &nbsp;<span class="span_detail">{{
+              country.subregion
+            }}</span>
+          </p>
+          <p class="pall">
+            Capital: &nbsp;<span class="span_detail">{{
+              country.capital
+            }}</span>
+          </p>
         </div>
         <div class="right">
-          <p class="pall">Top Level Domain: &nbsp;<span class="span_detail">{{country.tld}}</span></p>
-          <p class="pall">Currencies: &nbsp;<span class="span_detail">{{country.currencies[0].name}}</span></p>
+          <p class="pall">
+            Top Level Domain: &nbsp;<span class="span_detail">{{
+              country.tld
+            }}</span>
+          </p>
+          <p class="pall">
+            Currencies: &nbsp;<span
+              class="span_detail"
+              *ngFor="let curr of country.currencies | keyvalue"
+              >{{ curr.key }} &nbsp;</span
+            >
+          </p>
+          <p class="pall">
+            Languages: &nbsp;<span
+              class="span_detail"
+              *ngFor="let lang of country.languages | keyvalue"
+              >{{ lang.value }} &nbsp;</span
+            >
+          </p>
+        </div>
+      </div>
+      <div class="borders-details mt-5">
+        <p class="pall">Border Countries:</p>
+        <div
+          class="box_countryBorder"
+          *ngFor="let country of bordersCountries"
+          (click)="goToDetails(country.name.common)"
+        >
+          <p class="pall">{{ country.name.common }}</p>
         </div>
       </div>
     </div>

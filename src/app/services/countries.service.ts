@@ -17,4 +17,7 @@ export class CountriesService {
       'https://restcountries.com/v3.1/name/' + country
     );
   }
+  getCountryByCode(code: string): Observable<any> {
+    return this.httpClient.get('https://restcountries.com/v3.1/alpha/' + code.toLowerCase());
+  }
 }

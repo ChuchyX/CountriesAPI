@@ -23,6 +23,11 @@
   grid-gap: 10rem;
 }
 
+.img_details{
+  width: 30rem;
+  height: 20rem;
+}
+
 .name_country{
   color: var(--Text);
   font-weight: 700;
@@ -44,6 +49,29 @@
   font-size: 1rem;
   font-weight: 100;
   color: var(--Text);
+}
+
+.box_countryBorder{
+  width: 8rem;
+  height: 2rem;
+  background-color: var(--Elements);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  color: var(--Text);
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.box_countryBorder:hover{
+  cursor: pointer;
+}
+
+.borders-details{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
